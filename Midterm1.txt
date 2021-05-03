@@ -1,0 +1,39 @@
+Problem 2: Java expressions, statements, and methods (20 points)
+(2a) 5.0 / 4 - 4 / 5 1.25
+7 < 9 - 5 && 3 % 0 == 3 false
+"B" + 8 + 4 "B84"
+ (2b)
+The 1st number is: 78
+The 2nd number is: 73
+Problem 3: Console Programs (25 points)
+/*
+* File: SecondLargest.java
+* ------------------------
+* This program finds the largest and second largest number
+* in a list entered by the user.
+*/
+import acm.program.*;
+public class SecondLargest extends ConsoleProgram {
+// Defines the sentinel used to signal the end of the input
+private static final int SENTINEL = 0;
+public void run() {
+println("This program finds the two largest integers in a");
+println("list. Enter values, one per line, using a "
+ + SENTINEL + " to");
+println("signal the end of the list.");
+int largest = -1;
+int secondLargest = -1;
+ int input = readInt(" ? ");
+while (input != SENTINEL) {
+if (input > largest) {
+secondLargest = largest;
+largest = input;
+} else if (input > secondLargest) {
+secondLargest = input;
+}
+input = readInt(" ? ");
+}
+println("The largest value is " + largest);
+println("The second largest is " + secondLargest);
+}
+}
