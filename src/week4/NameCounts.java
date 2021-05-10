@@ -19,6 +19,7 @@ public class NameCounts extends ConsoleProgram {
 			if(name.equals("")) break;
 			if(names.containsKey(name)== false) {
 				names.put(name, 1);
+				
 			
 			}else {
 				int addOne =names.get(name) + 1;

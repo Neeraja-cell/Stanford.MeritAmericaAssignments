@@ -9,7 +9,6 @@ public class UniqueNames extends ConsoleProgram {
 	public void run() {
 		askForNames();
 		writeUniqueNames();
-
 	}
 
 	private void askForNames() {
